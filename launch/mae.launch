@@ -1,0 +1,4 @@
+<launch>
+  <node name="mae" pkg="fyt_mae" type="node" output="screen">
+  </node> 
+</launch>
