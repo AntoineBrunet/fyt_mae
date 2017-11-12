@@ -23,8 +23,8 @@ namespace fyt_mae {
 			}
 
 			ROSMAE() : MAE(FYT_INIT_STATE), n("~") {
-				signal_sub = n.subscribe("signals", 1, &ROSMAE::sig_cb, this);
-				state_pub = n.advertise<cmg_msgs::State>("states", 1);
+				signal_sub = n.subscribe("signal", 1, &ROSMAE::sig_cb, this);
+				state_pub = n.advertise<cmg_msgs::State>("state", 1);
 				
 				add_transition(STATE_SAFE,	STATE_SAFE,	SIG_ALARM);
 				add_transition(STATE_READY,	STATE_SAFE,	SIG_ALARM);
