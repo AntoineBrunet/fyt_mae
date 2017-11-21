@@ -37,6 +37,7 @@ namespace fyt_mae {
 				add_transition(STATE_SAFE,	STATE_SAFE,	SIG_ALARM);
 				add_transition(STATE_READY,	STATE_SAFE,	SIG_ALARM);
 				add_transition(STATE_MISS,	STATE_SAFE,	SIG_ALARM);
+				add_transition(STATE_MISS,	STATE_SAFE,	SIG_FAST);
 				add_transition(STATE_POST,	STATE_SAFE,	SIG_ALARM);
 				
 				add_transition(STATE_SAFE,	STATE_READY,	SIG_GOOD);
